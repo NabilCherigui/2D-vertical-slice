@@ -27,8 +27,8 @@
             <state relative-caret-position="15">
               <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <marker date="1479739414000" expanded="true" signature="62:271" ph="{...}" />
-                <marker date="1479739414000" expanded="true" signature="110:269" ph="{...}" />
+                <marker date="1479740041000" expanded="true" signature="62:271" ph="{...}" />
+                <marker date="1479740041000" expanded="true" signature="110:269" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -40,6 +40,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/../../Assets/RotateCircle.cs" />
+        <option value="$PROJECT_DIR$/../../Assets/RopeScript.cs" />
       </list>
     </option>
   </component>
@@ -150,12 +151,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479739218073</updated>
-      <workItem from="1479739221390" duration="593000" />
+      <workItem from="1479739221390" duration="813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="593000" />
+    <option name="totallyTimeSpent" value="813000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -201,13 +202,21 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../Assets/RopeScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../Assets/RotateCircle.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <marker date="1479739414000" expanded="true" signature="62:271" ph="{...}" />
-            <marker date="1479739414000" expanded="true" signature="110:269" ph="{...}" />
+            <marker date="1479740041000" expanded="true" signature="62:271" ph="{...}" />
+            <marker date="1479740041000" expanded="true" signature="110:269" ph="{...}" />
           </folding>
         </state>
       </provider>
