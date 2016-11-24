@@ -11,14 +11,10 @@ public class StarCounter : MonoBehaviour {
 	void Update ()
 	{
 		_count = GameObject.FindGameObjectsWithTag ("Star").Length;
-		for (int i = 0; i < _Stars.Length; i++)
-		{
-			if(_count < _oldCount)
-			{
-				_Stars [i].SetActive (true);
-				_oldCount = _count;
-			}
-		}
+        if (_count < _oldCount)
+        {
+            _Stars[_count].SetActive(true);
+        }
 		_oldCount = _count;
 	}
 }
