@@ -18,12 +18,10 @@ public class ButtonChange : MonoBehaviour {
 		if(button.image.sprite == grav2)
 		{
 			button.image.sprite = grav1;
-			Debug.Log (grav1);
 		}
 		else if(button.image.sprite == grav1)
 		{
 			button.image.sprite = grav2;
-			Debug.Log (grav2);
 		}
 	}
 }
