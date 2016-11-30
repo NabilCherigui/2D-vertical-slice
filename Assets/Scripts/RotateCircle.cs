@@ -4,7 +4,7 @@ public class RotateCircle : MonoBehaviour {
 
     [Range(1, 2)]
     [SerializeField]
-    private float rotationOffset = 1;
+    private float rotationOffset = 1.233f;
 
     private float _time;
 

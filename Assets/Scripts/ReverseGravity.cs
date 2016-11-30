@@ -16,7 +16,7 @@ public class ReverseGravity : MonoBehaviour {
             UpDown = false;
             for (int i = 0; i < objects.Length; i++)
             {
-                objects[i].gravityScale = 1.2f;
+                objects[i].gravityScale = 1.8f;
             }
         }
         else
