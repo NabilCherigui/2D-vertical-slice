@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class Rope2DEditorWindow : EditorWindow  {
 
 
-    public GameObject startPoint;
+/*    public GameObject startPoint;
     public GameObject endPoint;
     public GameObject ropeBit;
 
@@ -745,6 +745,6 @@ public class Rope2DEditorWindow : EditorWindow  {
     //    EditorPrefs.DeleteKey("NameGrav");
     //    EditorPrefs.DeleteKey("NameLayer");
     //}
-
+*/
 }
 
