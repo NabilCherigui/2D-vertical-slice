@@ -5,6 +5,9 @@ public class DestroyOther : MonoBehaviour
 {
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		Destroy (other.gameObject);
+        if (other.CompareTag("Star"))
+        {
+            Destroy(other.gameObject);
+        }
 	}
 }
