@@ -6,7 +6,6 @@ public class Animations : MonoBehaviour {
 	private GameObject Target;
 
 	private Animator Animates;
-
 	private int playing = 0;
 
 	void Start (){
@@ -14,15 +13,24 @@ public class Animations : MonoBehaviour {
 	}
 
 	void Update (){
-		if (Target.transform.position.x > -2.5 && Target.transform.position.x < -1){
+		if (Target.transform.position.x > -2.5 && Target.transform.position.x < -1) {
 			Place ();
+		} 
+		else {
+			StartCoroutine (Placing ());
+		}
+
+		if (Target.transform.position.y > -2.5 && Target.transform.position.y < -1) {
+			Test ();
+		} 
+		else {
+			StartCoroutine (Testing ());
 		}
 	}
 
 	public void Place (){
 		playing = 1;
-		Animates.SetInteger ("Animate", playing);
-		StartCoroutine (Placing ());
+		SetAnimation ();
 	}
 
 	IEnumerator Placing (){
@@ -31,14 +39,13 @@ public class Animations : MonoBehaviour {
 			
 			yield return new WaitForSeconds (0.417f);
 			playing = 0;
-			Animates.SetInteger ("Animate", playing);
+			SetAnimation ();
 		}
 	}
 
 	public void Test (){
 		playing = 2;
-		Animates.SetInteger ("Animate", playing);
-		StartCoroutine (Testing ());
+		SetAnimation ();
 	}
 
 	IEnumerator Testing (){
@@ -47,7 +54,11 @@ public class Animations : MonoBehaviour {
 
 			yield return new WaitForSeconds (0.417f);
 			playing = 0;
-			Animates.SetInteger ("Animate", playing);
+			SetAnimation ();
 		}
+	}
+
+	private void SetAnimation (){
+		Animates.SetInteger ("Animate", playing);
 	}
 }
