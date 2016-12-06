@@ -5,11 +5,15 @@ public class Animations : MonoBehaviour {
 	[SerializeField]
 	private GameObject Target;
 
+	[SerializeField]
+	private GameObject[] star;
+
 	private Animator Animates;
 	private int playing = 0;
 
 	void Start (){
 		Animates = GetComponent<Animator> ();
+		star = GameObject.FindGameObjectsWithTag ("Star");
 	}
 
 	void Update (){
@@ -20,12 +24,17 @@ public class Animations : MonoBehaviour {
 			StartCoroutine (Placing ());
 		}
 
-		if (Target.transform.position.y > -2.5 && Target.transform.position.y < -1) {
-			Test ();
-		} 
-		else {
-			StartCoroutine (Testing ());
+		for (int i = 0; i < star.Length; i++) {
+			
+			if (star[i] == null) {
+				Test ();
+				star[i] = new GameObject ();
+			} 
+			else {
+				StartCoroutine (Testing ());
+			}	
 		}
+
 	}
 
 	public void Place (){
