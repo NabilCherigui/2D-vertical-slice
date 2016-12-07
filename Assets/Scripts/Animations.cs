@@ -2,30 +2,23 @@
 using System.Collections;
 
 public class Animations : MonoBehaviour {
-	[SerializeField]
-	private GameObject Target;
 
 	[SerializeField]
 	private GameObject[] star;
 
 	private Animator Animates;
 	private int playing = 0;
+	private int randomNumber;
 
 	void Start (){
 		Animates = GetComponent<Animator> ();
 		star = GameObject.FindGameObjectsWithTag ("Star");
+		randomNumber = Random.Range (11, 15);
+		StartCoroutine(Placing ());
 	}
 
 	void Update (){
-		if (Target.transform.position.x > -2.5 && Target.transform.position.x < -1) {
-			Place ();
-		} 
-		else {
-			StartCoroutine (Placing ());
-		}
-
 		for (int i = 0; i < star.Length; i++) {
-			
 			if (star[i] == null) {
 				Test ();
 				star[i] = new GameObject ();
@@ -37,19 +30,18 @@ public class Animations : MonoBehaviour {
 
 	}
 
-	public void Place (){
+	IEnumerator Placing (){
+
+		yield return new WaitForSeconds (randomNumber);
 		playing = 1;
 		SetAnimation ();
-	}
+		randomNumber = Random.Range (11, 15);
 
-	IEnumerator Placing (){
-		
-		while (playing == 1){
-			
-			yield return new WaitForSeconds (0.417f);
-			playing = 0;
-			SetAnimation ();
-		}
+		yield return new WaitForSeconds (0.417f);
+		playing = 0;
+		SetAnimation ();
+
+		StartCoroutine (Placing ());
 	}
 
 	public void Test (){
