@@ -4,33 +4,33 @@ using System.Collections;
 public class Particle : MonoBehaviour {
 
 	[SerializeField]
-	private GameObject[] stars;
+	private GameObject[] _stars;
 
 	[SerializeField]
-	private Vector2[] starPositions;
+	private Vector2[] _starPositions;
 
 	[SerializeField]
-	private GameObject particle;
+	private GameObject _particle;
 
-	private Animator animate;
+	private Animator _animate;
 
 	[SerializeField]
-	private DestroyOther remover;
+	private DestroyOther _remover;
 
 	void Start (){
-		stars = GameObject.FindGameObjectsWithTag ("Star");
-		for (int i = 0; i < stars.Length; i++) {
-			starPositions[i] = stars[i].transform.position;
+		_stars = GameObject.FindGameObjectsWithTag ("Star");
+		for (int i = 0; i < _stars.Length; i++) {
+			_starPositions[i] = _stars[i].transform.position;
 		}
 	}
 
 	void Update (){
-		for (int i = 0; i < stars.Length; i++) {
-			if (stars [i] == null) {
+		for (int i = 0; i < _stars.Length; i++) {
+			if (_stars [i] == null) {
 
-				stars[i] = new GameObject ();
-				particle.SetActive (true);
-				particle.transform.position = starPositions [i];
+				_stars[i] = new GameObject ();
+				_particle.SetActive (true);
+				_particle.transform.position = _starPositions [i];
 				StartCoroutine(startAnimation ());
 			}
 		}
@@ -38,6 +38,6 @@ public class Particle : MonoBehaviour {
 
 	IEnumerator startAnimation (){
 		yield return new WaitForSeconds (1);
-		particle.SetActive (false);
+		_particle.SetActive (false);
 	}
 }
