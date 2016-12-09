@@ -4,34 +4,28 @@ using System.Collections;
 public class ReverseGravity : MonoBehaviour {
 
     [SerializeField]
-    private Rigidbody2D candy;
-
+    private float _gravityScale;
     [SerializeField]
-    private float gravityScale;
+    private Rigidbody2D[] _objects;
 
-    [SerializeField]
-    private Rigidbody2D[] objects;
-
-    private bool UpDown;
+    private bool _upDown;
 
 	public void Reverse()
 	{
-        if(UpDown)
+        if(_upDown)
         {
-            UpDown = false;
-            candy.gravityScale = 1;
-            for (int i = 0; i < objects.Length; i++)
+            _upDown = false;
+            foreach (Rigidbody2D t in _objects)
             {
-                objects[i].gravityScale = gravityScale;
+                t.gravityScale = _gravityScale;
             }
         }
         else
         {
-            UpDown = true;
-            candy.gravityScale = -1;
-            for (int i = 0; i < objects.Length; i++)
+            _upDown = true;
+            foreach (Rigidbody2D t in _objects)
             {
-                objects[i].gravityScale = -gravityScale;
+                t.gravityScale = -_gravityScale;
             }
         }
         

@@ -1,0 +1,57 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class ReverseGravity : MonoBehaviour {
+<<<<<<< HEAD
+
+    [SerializeField]
+    private Rigidbody2D candy;
+
+    [SerializeField]
+    private float gravityScale;
+=======
+	private Rigidbody2D _rigidBody;
+>>>>>>> origin/master
+
+    [SerializeField]
+    private Rigidbody2D[] _objects;
+
+    private bool _upDown;
+
+	public void Reverse()
+	{
+        if(_upDown)
+        {
+<<<<<<< HEAD
+            UpDown = false;
+            candy.gravityScale = 1;
+            for (int i = 0; i < objects.Length; i++)
+            {
+                objects[i].gravityScale = gravityScale;
+=======
+            _upDown = false;
+            foreach (Rigidbody2D t in _objects)
+            {
+                t.gravityScale = 0.4f;
+>>>>>>> origin/master
+            }
+        }
+        else
+        {
+<<<<<<< HEAD
+            UpDown = true;
+            candy.gravityScale = -1;
+            for (int i = 0; i < objects.Length; i++)
+            {
+                objects[i].gravityScale = -gravityScale;
+=======
+            _upDown = true;
+            foreach (Rigidbody2D t in _objects)
+            {
+                t.gravityScale = -0.4f;
+>>>>>>> origin/master
+            }
+        }
+        
+	}
+}

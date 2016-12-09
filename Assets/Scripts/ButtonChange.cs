@@ -4,24 +4,24 @@ using UnityEngine.UI;
 
 public class ButtonChange : MonoBehaviour {
 	[SerializeField]
-	private Sprite grav1;
+	private Sprite _grav1;
 	[SerializeField]
-	private Sprite grav2;
+	private Sprite _grav2;
 
-	private Button button;
+	private Button _button;
 
 	void Start () {
-		button = GetComponent<Button> ();
+		_button = GetComponent<Button> ();
 	}
 
 	public void ButtonSwitch (){
-		if(button.image.sprite == grav2)
+		if(_button.image.sprite == _grav2)
 		{
-			button.image.sprite = grav1;
+			_button.image.sprite = _grav1;
 		}
-		else if(button.image.sprite == grav1)
+		else if(_button.image.sprite == _grav1)
 		{
-			button.image.sprite = grav2;
+			_button.image.sprite = _grav2;
 		}
 	}
 }

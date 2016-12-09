@@ -7,12 +7,12 @@ using System.Collections;
 
 public class Pause : MonoBehaviour {
 
-	[SerializeField] private MenuManagement canvasHolder; // for the call of the pause canvas.
-	[SerializeField] private GameObject canvasID;
+	[SerializeField] private MenuManagement _canvasHolder; // for the call of the pause canvas.
+	[SerializeField] private GameObject _canvasId;
 
 	void Start()
 	{
-		canvasHolder = canvasHolder.GetComponent<MenuManagement> ();
+		_canvasHolder = _canvasHolder.GetComponent<MenuManagement> ();
 	}
 
 	public void OnPause()
@@ -20,12 +20,12 @@ public class Pause : MonoBehaviour {
 //		print ("Start Pause");
 		if(Time.timeScale == 0) { // removes the game from pause.
 			Time.timeScale = 1;
-			canvasHolder.SetCanvasFalse (); // disabbles the canvas.
+			_canvasHolder.SetCanvasFalse (); // disabbles the canvas.
 		}
 		else if(Time.timeScale == 1) // sets the game on pause.
 		{
 			Time.timeScale = 0;
-			canvasHolder.OnButtonPress(canvasID); // enables the given canvas.
+			_canvasHolder.OnButtonPress(_canvasId); // enables the given canvas.
 		}
 	}
 }
