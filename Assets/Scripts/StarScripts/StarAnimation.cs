@@ -1,24 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class StarAnimation : MonoBehaviour {
 
-    //private Vector3 Scale = transform.localScale;
+    [SerializeField]
+    private List<GameObject> stars = new List<GameObject>();
 
-    void OnEnable ()
+    [SerializeField]
+    private GameObject[] starsUI;
+
+    private int tempCount = 0;
+
+    void Start()
     {
-        gameObject.transform.localScale = new Vector3(0f, 0.5f, 0.5f);
-        StartCoroutine(ScaleUp());
-	}
+        stars.AddRange(GameObject.FindGameObjectsWithTag("Star"));
+    }
 
-    private IEnumerator ScaleUp()
+    void Update()
     {
-        //if(Scale.x < 0.5f)
-       // {
-
-       // }
-        gameObject.transform.localScale += new Vector3(0.1f, 0f, 0f);
-        yield return new WaitForSeconds(0.1f);
-        StartCoroutine(ScaleUp());
+        for (int i = 0; i < stars.Count; i++)
+        {
+            if (stars[i] == null)
+            {
+                stars.RemoveAt(i);
+                starsUI[tempCount].GetComponent<StarRotate>().enabled = true;
+                tempCount++;
+            }
+        }
     }
 }
