@@ -1,36 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public class Particle : MonoBehaviour {
 
 	[SerializeField]
-	private GameObject[] _stars;
+	private List<GameObject> _stars = new List<GameObject>();
 
-	[SerializeField]
-	private Vector2[] _starPositions;
+    [SerializeField]
+	private List<Vector2> _starPositions = new List<Vector2>();
 
 	[SerializeField]
 	private GameObject _particle;
 
-	private Animator _animate;
-
-	[SerializeField]
-	private DestroyOther _remover;
-
 	void Start (){
-		_stars = GameObject.FindGameObjectsWithTag ("Star");
-		for (int i = 0; i < _stars.Length; i++) {
-			_starPositions[i] = _stars[i].transform.position;
+		_stars.AddRange(GameObject.FindGameObjectsWithTag ("Star"));
+		for (int i = 0; i < _stars.Count; i++)
+        {
+			_starPositions.Add(_stars[i].transform.position);
 		}
 	}
 
 	void Update (){
-		for (int i = 0; i < _stars.Length; i++) {
-			if (_stars [i] == null) {
-
-				_stars[i] = new GameObject ();
+		for (int i = 0; i < _stars.Count; i++)
+        {
+			if (_stars [i] == null)
+            {
+                _stars.RemoveAt(i);
 				_particle.SetActive (true);
 				_particle.transform.position = _starPositions [i];
+                _starPositions.RemoveAt(i);
 				StartCoroutine(startAnimation ());
 			}
 		}

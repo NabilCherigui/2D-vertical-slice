@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 20b9c9cbd1a2edf49805f99dee2f8179
-timeCreated: 1481565748
+timeCreated: 1481753446
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -22,6 +22,32 @@ TextureImporter:
     21300030: Rope_B1
     21300032: Rope_B2
     21300034: Rope_B3
+    21300036: CicleStar1
+    21300038: CicleStar4
+    21300040: CicleStar5
+    21300042: CicleStar6
+    21300044: CicleStar2
+    21300046: CicleStar3
+    21300048: GravityUp
+    21300050: StarFilled
+    21300052: LevelLetters
+    21300054: StarC1
+    21300056: RestartOff
+    21300058: PauseOff
+    21300060: StarC4
+    21300062: StarC5
+    21300064: StarC6
+    21300066: Restar
+    21300068: RopeB1
+    21300070: RopeB2
+    21300072: RopeB3
+    21300074: PowerUpOff
+    21300076: MenuOff
+    21300078: RopeR1
+    21300080: RopeR2
+    21300082: RopeR3
+    21300084: StarC2
+    21300086: StarC3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -71,117 +97,39 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GravityUp
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 727
-        width: 407
-        height: 410
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: GravityDown
       rect:
         serializedVersion: 2
-        x: 427
-        y: 727
-        width: 407
-        height: 410
+        x: 152
+        y: 757
+        width: 424
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PowerUp
+      name: GravityUp
       rect:
         serializedVersion: 2
-        x: 846
-        y: 894
-        width: 238
-        height: 243
+        x: 600
+        y: 757
+        width: 423
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: MenuDeactive
+      name: StarFilled
       rect:
         serializedVersion: 2
-        x: 1415
-        y: 793
-        width: 613
-        height: 344
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: RestartDeactive
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 396
-        width: 325
-        height: 325
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Restart
-      rect:
-        serializedVersion: 2
-        x: 341
-        y: 472
-        width: 236
-        height: 241
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Pause
-      rect:
-        serializedVersion: 2
-        x: 589
-        y: 466
-        width: 367
-        height: 247
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PauseDeactive
-      rect:
-        serializedVersion: 2
-        x: 975
-        y: 459
-        width: 457
-        height: 334
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Menu
-      rect:
-        serializedVersion: 2
-        x: 1441
-        y: 533
-        width: 542
-        height: 252
+        x: 1838
+        y: 788
+        width: 392
+        height: 383
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,114 +139,283 @@ TextureImporter:
       name: StarEmpty
       rect:
         serializedVersion: 2
-        x: 17
-        y: 8
-        width: 392
-        height: 380
+        x: 2254
+        y: 789
+        width: 395
+        height: 382
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: StarFull
+      name: LevelLetters
       rect:
         serializedVersion: 2
-        x: 417
-        y: 10
-        width: 390
-        height: 380
+        x: 1155
+        y: 805
+        width: 599
+        height: 329
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PowerUpDeactive
+      name: StarC1
       rect:
         serializedVersion: 2
-        x: 1092
-        y: 817
-        width: 317
-        height: 319
+        x: 2676
+        y: 758
+        width: 69
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Rope_R1
+      name: RestartOff
       rect:
         serializedVersion: 2
-        x: 875
-        y: 243
-        width: 143
-        height: 189
+        x: 1102
+        y: 390
+        width: 325
+        height: 325
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Rope_R2
+      name: PauseOff
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 243
-        width: 143
-        height: 189
+        x: 1485
+        y: 385
+        width: 458
+        height: 334
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Rope_R3
+      name: StarC4
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 243
-        width: 143
-        height: 189
+        x: 2676
+        y: 686
+        width: 69
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Rope_B1
+      name: StarC5
       rect:
         serializedVersion: 2
-        x: 875
-        y: 36
-        width: 143
-        height: 189
+        x: 2748
+        y: 686
+        width: 69
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Rope_B2
+      name: StarC6
       rect:
         serializedVersion: 2
-        x: 1048
-        y: 36
-        width: 143
-        height: 189
+        x: 2820
+        y: 686
+        width: 69
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Rope_B3
+      name: Restar
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 36
-        width: 143
-        height: 189
+        x: 152
+        y: 402
+        width: 240
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Pause
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 388
+        width: 371
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RopeB1
+      rect:
+        serializedVersion: 2
+        x: 2227
+        y: 418
+        width: 147
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RopeB2
+      rect:
+        serializedVersion: 2
+        x: 2465
+        y: 418
+        width: 146
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RopeB3
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 418
+        width: 147
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PowerUp
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 80
+        width: 242
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Menu
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 71
+        width: 545
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PowerUpOff
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 40
+        width: 328
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MenuOff
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 18
+        width: 631
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RopeR1
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 111
+        width: 147
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RopeR2
+      rect:
+        serializedVersion: 2
+        x: 2468
+        y: 111
+        width: 146
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RopeR3
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 111
+        width: 147
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StarC2
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 758
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StarC3
+      rect:
+        serializedVersion: 2
+        x: 2820
+        y: 758
+        width: 69
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

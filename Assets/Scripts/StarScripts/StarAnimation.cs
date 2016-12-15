@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class StarAnimation : MonoBehaviour {
 
-    [SerializeField]
     private List<GameObject> stars = new List<GameObject>();
 
     [SerializeField]

@@ -1,65 +1,71 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public class Animations : MonoBehaviour {
 
-	[SerializeField]
-	private GameObject[] star;
+    [SerializeField]
+	private List<GameObject> _star = new List<GameObject>();
 
-	private Animator Animates;
-	private int playing = 0;
-	private int randomNumber;
+	private Animator _animates;
+	private int _playing = 0;
+	private int _randomNumber;
 
 	void Start (){
-		Animates = GetComponent<Animator> ();
-		star = GameObject.FindGameObjectsWithTag ("Star");
-		randomNumber = Random.Range (11, 15);
+		_animates = GetComponent<Animator> ();
+		_star.AddRange(GameObject.FindGameObjectsWithTag ("Star"));
+		_randomNumber = Random.Range (11, 15);
 		StartCoroutine(Placing ());
 	}
 
 	void Update (){
-		for (int i = 0; i < star.Length; i++) {
-			if (star[i] == null) {
-				Test ();
-				star[i] = new GameObject ();
+		for (int i = 0; i < _star.Count; i++) {
+			if (_star[i] == null)
+            {
+                if(_star.Count != 0)
+                {
+                    CandyHit();
+                    _star.RemoveAt(i);
+                }
 			} 
 			else {
-				StartCoroutine (Testing ());
+				StartCoroutine (Reset());
 			}	
 		}
 
 	}
 
-	IEnumerator Placing (){
+	private IEnumerator Placing (){
 
-		yield return new WaitForSeconds (randomNumber);
-		playing = 1;
+		yield return new WaitForSeconds (_randomNumber);
+		_playing = 1;
 		SetAnimation ();
-		randomNumber = Random.Range (11, 15);
+		_randomNumber = Random.Range (11, 15);
 
 		yield return new WaitForSeconds (0.417f);
-		playing = 0;
+		_playing = 0;
 		SetAnimation ();
 
 		StartCoroutine (Placing ());
 	}
 
-	public void Test (){
-		playing = 2;
+	private void CandyHit (){
+		_playing = 2;
 		SetAnimation ();
 	}
 
-	IEnumerator Testing (){
+	private IEnumerator Reset (){
 
-		while (playing == 2){
+		while (_playing == 2){
 
 			yield return new WaitForSeconds (0.417f);
-			playing = 0;
+			_playing = 0;
 			SetAnimation ();
 		}
 	}
 
 	private void SetAnimation (){
-		Animates.SetInteger ("Animate", playing);
+		_animates.SetInteger ("Animate", _playing);
 	}
 }
