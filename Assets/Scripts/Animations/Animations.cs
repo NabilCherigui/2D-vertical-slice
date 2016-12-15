@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 public class Animations : MonoBehaviour {
 
-    [SerializeField]
 	private List<GameObject> _star = new List<GameObject>();
 
 	private Animator _animates;
@@ -19,7 +18,7 @@ public class Animations : MonoBehaviour {
 		StartCoroutine(Placing ());
 	}
 
-	void Update (){
+	private void Update (){
 		for (int i = 0; i < _star.Count; i++) {
 			if (_star[i] == null)
             {

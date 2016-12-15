@@ -5,10 +5,7 @@ using System.Collections.Generic;
 
 public class Particle : MonoBehaviour {
 
-	[SerializeField]
 	private List<GameObject> _stars = new List<GameObject>();
-
-    [SerializeField]
 	private List<Vector2> _starPositions = new List<Vector2>();
 
 	[SerializeField]
@@ -37,7 +34,7 @@ public class Particle : MonoBehaviour {
 	}
 
 	IEnumerator startAnimation (){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (0.3f);
 		_particle.SetActive (false);
 	}
 }

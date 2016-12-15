@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 47d776e282adadf4c9e5307d6dee493c
-timeCreated: 1481793258
+timeCreated: 1481822631
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,7 @@ TextureImporter:
     21300014: StarParticle_7
     21300016: StarParticle_8
     21300018: StarParticle_9
+    21300020: StarParticle_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -184,6 +185,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 500
+        y: 510
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StarParticle_10
+      rect:
+        serializedVersion: 2
+        x: 1000
         y: 510
         width: 500
         height: 500

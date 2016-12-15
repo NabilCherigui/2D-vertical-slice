@@ -3,30 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class StarAnimation : MonoBehaviour {
-    [SerializeField] private AudioManager am;
-    private List<GameObject> stars = new List<GameObject>();
+    [SerializeField] private AudioManager _adioManager;
+    private List<GameObject> _stars = new List<GameObject>();
 
     [SerializeField]
-    private GameObject[] starsUI;
+    private GameObject[] _starsUI;
 
     private int tempCount = 0;
 
     void Start()
     {
-        stars.AddRange(GameObject.FindGameObjectsWithTag("Star"));
+        _stars.AddRange(GameObject.FindGameObjectsWithTag("Star"));
     }
 
     void Update()
     {
-        for (int i = 0; i < stars.Count; i++)
+        for (int i = 0; i < _stars.Count; i++)
         {
-            if (stars[i] == null)
+            if (_stars[i] == null)
             {
 
-                stars.RemoveAt(i);
-                starsUI[tempCount].GetComponent<StarRotate>().enabled = true;
+                _stars.RemoveAt(i);
+                _starsUI[tempCount].GetComponent<StarRotate>().enabled = true;
                 tempCount++;
-                am.PlayStarSound(tempCount);
+                _adioManager.PlayStarSound(tempCount);
             }
         }
     }

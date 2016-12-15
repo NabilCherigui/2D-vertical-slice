@@ -4,9 +4,9 @@ using System.Collections;
 public class StarRotate : MonoBehaviour {
 
     [SerializeField]
-    private float rotationSpeed;
+    private float _rotationSpeed;
 
-    private bool complete = false;
+    private bool _complete = false;
 
     // Use this for initialization
     void Start () {
@@ -14,13 +14,13 @@ public class StarRotate : MonoBehaviour {
 	}
     private IEnumerator ScaleUp()
     {
-        while (!complete)
+        while (!_complete)
         {
-            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up * _rotationSpeed * Time.deltaTime);
 
             if (transform.rotation.eulerAngles.y >= 179)
             {
-                complete = true;
+                _complete = true;
                 transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
             }
             yield return null;

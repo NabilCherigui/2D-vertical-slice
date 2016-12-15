@@ -6,21 +6,19 @@ using System.Collections.Generic;
 public class CandyAnimate : MonoBehaviour {
 
 	[SerializeField]
-	private GameObject candy;
-
-	[SerializeField]
-	private List<GameObject> star = new List<GameObject>();
+	private GameObject _candy;
+	private List<GameObject> _star = new List<GameObject>();
 
 	void Start (){
-		star.AddRange( GameObject.FindGameObjectsWithTag ("Star"));
+		_star.AddRange( GameObject.FindGameObjectsWithTag ("Star"));
 	}
 
 	void Update (){
 		
-		for (int i = 0; i < star.Count; i++) {
-			if (star[i] == null) {
-				star.RemoveAt (i);
-				candy.SetActive (true);
+		for (int i = 0; i < _star.Count; i++) {
+			if (_star[i] == null) {
+				_star.RemoveAt (i);
+				_candy.SetActive (true);
 				StartCoroutine(startAnimation ());
 			}
 		}
@@ -28,6 +26,6 @@ public class CandyAnimate : MonoBehaviour {
 
 	IEnumerator startAnimation (){
 		yield return new WaitForSeconds (1);
-		candy.SetActive (false);
+		_candy.SetActive (false);
 	}
 }

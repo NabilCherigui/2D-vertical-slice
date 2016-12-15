@@ -6,7 +6,6 @@ public class StarMovement : MonoBehaviour {
     [SerializeField]
     private float _steps;
 	
-	// Update is called once per frame
 	void Start ()
     {
         StartCoroutine("ChangePosition");
