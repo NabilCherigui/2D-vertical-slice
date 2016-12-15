@@ -8,11 +8,18 @@ public class RotateCircle : MonoBehaviour {
 
     private float _time;
 
+    private Rigidbody2D _rb;
+
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+    }
+
     void Update ()
     {
         _time += Time.deltaTime;
         var x = Mathf.Cos (_time) * _rotationOffset;
         var y = Mathf.Sin (_time) * _rotationOffset;
-        transform.position = new Vector2 (x, y + 1.24f);
+        _rb.velocity = new Vector2 (x, y);
     }
 }
