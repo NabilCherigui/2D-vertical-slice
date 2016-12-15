@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class StarAnimation : MonoBehaviour {
-
+    [SerializeField] private AudioManager am;
     private List<GameObject> stars = new List<GameObject>();
 
     [SerializeField]
@@ -22,9 +22,11 @@ public class StarAnimation : MonoBehaviour {
         {
             if (stars[i] == null)
             {
+
                 stars.RemoveAt(i);
                 starsUI[tempCount].GetComponent<StarRotate>().enabled = true;
                 tempCount++;
+                am.PlayStarSound(tempCount);
             }
         }
     }

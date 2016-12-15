@@ -2,7 +2,11 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ButtonChange : MonoBehaviour {
+public class ButtonChange : MonoBehaviour
+{
+    [SerializeField]
+    private AudioManager am;
+
 	[SerializeField]
 	private Sprite _grav1;
 	[SerializeField]
@@ -17,11 +21,14 @@ public class ButtonChange : MonoBehaviour {
 	public void ButtonSwitch (){
 		if(_button.image.sprite == _grav2)
 		{
-			_button.image.sprite = _grav1;
+		    am.PlaySound(am.Swoosh2);
+		    _button.image.sprite = _grav1;
+
 		}
 		else if(_button.image.sprite == _grav1)
 		{
-			_button.image.sprite = _grav2;
+		    am.PlaySound(am.Swoosh1);
+		    _button.image.sprite = _grav2;
 		}
 	}
 }
