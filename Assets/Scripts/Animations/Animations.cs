@@ -23,15 +23,10 @@ public class Animations : MonoBehaviour {
 		for (int i = 0; i < _star.Count; i++) {
 			if (_star[i] == null)
             {
-                if(_star.Count != 0)
-                {
-                    CandyHit();
-                    _star.RemoveAt(i);
-                }
-			} 
-			else {
-				StartCoroutine (Reset());
-			}	
+                _star.RemoveAt(i);
+                CandyHit();
+                StartCoroutine(Reset());
+            }	
 		}
 
 	}
