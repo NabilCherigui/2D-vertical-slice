@@ -17,11 +17,11 @@ public class Animations : MonoBehaviour {
 		_animates = GetComponent<Animator> ();
 		_star.AddRange(GameObject.FindGameObjectsWithTag ("Star"));
 		_randomNumber = Random.Range (11, 15);
-		StartCoroutine(Placing ());
-	}
+        //StartCoroutine(Placing ()); Not being used, animation is not finished.
+    }
 
-	//If a star disappears it gets removed from the list, the CandyHit function starts and the Reset coroutine starts.
-	private void Update (){
+    //If a star disappears it gets removed from the list, the CandyHit function starts and the Reset coroutine starts.
+    private void Update (){
 		for (int i = 0; i < _star.Count; i++) {
 			if (_star[i] == null)
             {
@@ -35,7 +35,8 @@ public class Animations : MonoBehaviour {
 
 	/*The coroutine waits for seconds equal to randomNumber. playing equals 1. SetAnimation starts. randomNumber get a new random range. It waits for 0.417 seconds so the animation can completely finish playing.
 	playing now equals 0. SetAnimation is activated. The coroutine activates itself.*/ 
-	private IEnumerator Placing (){
+	/*
+    private IEnumerator Placing (){
 
 		yield return new WaitForSeconds (_randomNumber);
 		_playing = 1;
@@ -48,9 +49,11 @@ public class Animations : MonoBehaviour {
 
 		StartCoroutine (Placing ());
 	}
+    */
 
 	//playing equals 2. SetAnimation gets activated.
-	private void CandyHit (){
+	private void CandyHit ()
+    {
 		_playing = 2;
 		SetAnimation ();
 	}
