@@ -51,7 +51,7 @@ public class Animations : MonoBehaviour {
 
 	private IEnumerator Reset (){
 
-		while (_playing == 2){
+		if (_playing == 2){
 
 			yield return new WaitForSeconds (0.417f);
 			_playing = 0;
