@@ -5,9 +5,6 @@ using System.Collections;
 
 public  class AudioManager : MonoBehaviour
 {
-
-
-
     public AudioClip Star1;
     public AudioClip Star2;
     public AudioClip Star3;
